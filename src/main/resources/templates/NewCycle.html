@@ -1,0 +1,23 @@
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Adding new cycle!
+		</title>
+		
+	</head>
+	<body>
+	<hr>
+		<h1>Add Cycle!</h1>
+		<hr>
+			
+			<form action="#" th:action="@{/save}"  th:object="${cycle}" method="POST">
+				<input type="text" th:field="*{id}" placeholder="Cycle ID">
+				<input type="text" th:field="*{name}" placeholder="Cycle name">
+				<input type="text" th:field="*{Stock}" placeholder="Cycle Stock">
+				<button type="submit" >Save Cycle.</button>
+			</form>
+		</hr>
+		<a th:href="@{/save}">Back to CylesList.</a>
+	</body>
+</html>

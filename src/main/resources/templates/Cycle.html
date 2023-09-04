@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+
+</head>
+
+<body>
+	Test
+	<table>
+
+		<thead>
+
+			<tr>
+
+				<th>id</th>
+
+				<th>Name</th>
+				
+				<th>Stock</th>
+				
+				<th>Action</th>
+
+			</tr>
+
+		</thead>
+
+		<tbody >
+
+			<tr th:each="cycle : ${Cycles}">
+				<td th:text="${cycle.id}"></td>
+				<td th:text="${cycle.name}"></td>
+				<td th:text="${cycle.stock}"></td>
+				<td> 
+					<a th:href="@{/borrowCycle/{id}(id=${cycle.id})}"  > Borrow </a>
+					<a th:href="@{/returnCycle/{id}(id=${cycle.id})}" > Return</a>
+					<a th:href="@{/restock/{id}(id=${cycle.id})}">Restock</a>
+				</td>
+			</tr>
+			
+			
+
+		</tbody>
+
+	</table>
+	<a th:href="@{/addCycle}">Add Cycles</a>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

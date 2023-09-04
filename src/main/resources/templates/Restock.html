@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Restock the cycle!
+		</title>
+	</head>
+	<body>
+		<h1>Restock Cycle!</h1>
+		<form action="#" th:action="@{/save}" th:object="${cycle}" method="POST">
+<!--			<p <span th:text="${cycle.id}"></span>></p>-->
+			<p  th:text="${id}" ></p>
+			<p  th:text="${name}" ></p>
+			<p <span th:text="${cycle.name}"></span>></p>
+			<input type="text" th:field="*{stock}" placeholder="Cycle stock">
+			<button type="submit" >Save changes!</button>
+		</form>
+	</body>
+</html>
